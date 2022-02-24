@@ -5,40 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Latihan 5</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Formulir Pendaftaran Akun</h1>
-    <form action="get" action="/1-3_act.php"> <!-- Buat file untuk action -->
-        <label for="nama">Nama : </label>
-        <input id="nama" type="text"><br>
-
-        <label for="nama">Email : </label>
-        <input id="nama" type="text"><br>
-
-        <label for="password">Password : </label>
-        <input id="password"type="password"><br>
-
-        <label for="tanggalLahir">Tanggal Lahir : </label>
-        <input id="tanggalLahir" type="date"><br>
-
-        <label>Jenis Kelamin : </label>
-        <input type="radio" id="lk" name="jenisKelamin" value="Laki-Laki">
-        <label for="lk">Laki-Laki</label>
-        <input type="radio" id="pr" name="jenisKelamin" value="Perempuan">
-        <label for="pr">Perempuan</label><br>
-
-        <label for="pekerjaan">Pekerjaan</label>
-        <select name="pekerjaan" id="pekerjaan">
-            <option value="Pelajar">Pelajar</option>
-            <option value="Wiraswasta">Wirausaha</option>
-            <option value="Lainnya">Lainnya</option>
-        </select><br>
+    <h1 id="title">Formulir Pendaftaran Akun</h1>
+    <form id="form">
+        <div class="line">
+            <label for="nama">Nama : </label>
+            <input id="nama" type="text"><br>
+        </div>
         
-        <label>Alamat : </label>
-        <textarea></textarea><br>
+        <div class="line">
+            <label for="nama">Email : </label>
+            <input id="nama" type="text"><br>
+        </div>
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Hapus</button>
+        <div class="line">
+            <label for="password">Password : </label>
+            <input id="password"type="password"><br>
+        </div>
+
+        <div class="line">
+            <label for="tanggalLahir">Tanggal Lahir : </label>
+            <input id="tanggalLahir" type="date"><br>
+        </div>
+
+        <div class="line">
+            <label>Jenis Kelamin : </label>
+            <input type="radio" id="lk" name="jenisKelamin" value="Laki-Laki">
+            <label for="lk">Laki-Laki</label>
+            <input type="radio" id="pr" name="jenisKelamin" value="Perempuan">
+            <label for="pr">Perempuan</label><br>
+        </div>
+
+        <div class="line">
+            <label for="pekerjaan">Pekerjaan</label>
+            <select name="pekerjaan" id="pekerjaan">
+                <option value="Pelajar">Pelajar</option>
+                <option value="Wiraswasta">Wirausaha</option>
+                <option value="Lainnya">Lainnya</option>
+            </select><br>
+        </div>
+        
+        <div class="line">
+            <label>Alamat : </label>
+            <textarea></textarea><br>
+        </div>
+
+        <div class="align-center line">
+            <button type="submit">Kirim</button>
+            <button type="reset">Hapus</button>
+        </div>
 
     </form>
 </body>
