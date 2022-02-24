@@ -1,0 +1,26 @@
+p {
+    text-align: center;
+    color: red;
+}
+
+#para1 {
+    text-align: center;
+    color: red;
+}
+
+.center {
+    color: rgb(255, 99, 71);
+    background-color:rgba(255, 99, 71, 0.9); /* red, green, blue, alpha */
+    border-color: #ff6347;
+    background-color: #f56;
+    color: hsl(52, 69%, 50%);
+    background-color: hsla(52, 69%, 50%, 0.8); /*hue, saturation, lightness, alpha*/
+    background: #ffffff url("img_tree.png") no-repeat right top;
+}
+
+.dotted {
+    border-style: dotted;
+    border-width: 5px;
+    border: 2px solid red;
+    border-radius: 5px;
+}

@@ -4,40 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan 3</title>
+    <title>Latihan 5</title>
 </head>
 <body>
     <h1>Formulir Pendaftaran Akun</h1>
-    <form method="" action="/1-3_act.php"> <!-- Buat file untuk action -->
+    <form action="get" action="/1-3_act.php"> <!-- Buat file untuk action -->
         <label for="nama">Nama : </label>
-        <input id="nama"><br>
+        <input id="nama" type="text"><br>
 
-        <label for="email">Email : </label>
-        <input id="email" type="email"><br>
+        <label for="nama">Email : </label>
+        <input id="nama" type="text"><br>
 
         <label for="password">Password : </label>
-        <input id="password"><br>
+        <input id="password"type="password"><br>
 
         <label for="tanggalLahir">Tanggal Lahir : </label>
-        <input id="tanggalLahir"><br>
+        <input id="tanggalLahir" type="date"><br>
 
         <label>Jenis Kelamin : </label>
-        <input  id="lk" name="jenisKelamin" value="Laki-Laki">
-        <label for="">Laki-Laki</label>
-        <input id="pr" name="jenisKelamin" value="Perempuan">
-        <label for="">Perempuan</label><br>
+        <input type="radio" id="lk" name="jenisKelamin" value="Laki-Laki">
+        <label for="lk">Laki-Laki</label>
+        <input type="radio" id="pr" name="jenisKelamin" value="Perempuan">
+        <label for="pr">Perempuan</label><br>
 
         <label for="pekerjaan">Pekerjaan</label>
-
+        <select name="pekerjaan" id="pekerjaan">
             <option value="Pelajar">Pelajar</option>
             <option value="Wiraswasta">Wirausaha</option>
             <option value="Lainnya">Lainnya</option>
+        </select><br>
         
         <label>Alamat : </label>
         <textarea></textarea><br>
 
-        <button type="">Kirim</button>
-        <button type="">Hapus</button>
+        <button type="submit">Kirim</button>
+        <button type="reset">Hapus</button>
 
     </form>
 </body>
