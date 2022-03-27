@@ -31,21 +31,20 @@
 </body>
 </html>
 <script>
-    //Fungsi untuk menampilkan tulisan di area hasil
-    const display = (text) => { 
+    // Fungsi untuk mendapatkan text di elemen result saat ini, textnya akan di return
+    // Contoh penggunaan: let a = getCurrentResult();
+    const getCurrentResult = () => {
+        return document.getElementById('result').textContent; // Variabel berisi
+    }
+
+    //Fungsi untuk mengganti tulisan di area result
+    const display = (text) => {
         const result = document.getElementById('result'); //Elemen ber-Id "result"
         result.textContent = text;
     };
 
-    //Mereset hasil
+    //Fungsi untuk mereset result
     function clr(){
         display(0);
-    };
-
-
-    // Fungsi untuk menghitung hasil dan menampilkannya
-    function count(){
-        //isi disini
-        display();
     };
 </script>
