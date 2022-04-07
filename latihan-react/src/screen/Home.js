@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import Button from '../components/Button';
+import { EffectExample, EffectExample2 } from '../components/Effect';
+import { Example, Example2 } from '../components/Example';
+import Greeting from '../components/Greetings';
+import NumberList from '../components/NumberList';
 
 function Home() {
 
@@ -23,6 +27,12 @@ function Home() {
           text = "Button 2"
           onClick = {changeButtonColor}
       />
+      <Greeting />
+      {/* <NumberList /> */}
+      {/* <Example /> */}
+      {/* <Example2 /> */}
+      {/* <EffectExample/> */}
+      {/* <EffectExample2/> */}
     </>
   );
 }
