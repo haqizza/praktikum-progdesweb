@@ -1,15 +1,11 @@
-import Home from "../screen/Home";
+import Home from "./screen/Home";
 
 function App() {
   return (
     <>
-      <Home name={names}/>
+      <Home/>
     </>
   );
-}
-const names = {
-  a:"Sara",
-  b:"Jihan"
 }
 
 export default App;
