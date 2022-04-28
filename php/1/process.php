@@ -1,16 +1,17 @@
 <?php
-    include('controller.php');
+    include('db.php');
 
-    if(!isset($_GET["countryName"])){
-        print_r($_GET);
+    if(isset($_GET["countryName"])){
         $countryName = $_GET["countryName"];
         $countryCode = $_GET["countryCode"];
         $cityName = $_GET["cityName"];
         $cityPopulation = $_GET["cityPopulation"];
 
-        saveCountryCityData($countryName, $countryCode, $cityName, $cityPopulation);        
+        $db = new Database();
 
-        back();
+        $db->saveCountryCityData($countryName, $countryCode, $cityName, $cityPopulation);        
+
+        // back();
     }
     else{
         back();
@@ -20,3 +21,4 @@
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
 ?>
+

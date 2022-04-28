@@ -1,14 +1,17 @@
 <?php
+    session_start();
     ini_set('display_errors', 1);
 
     class Database{
         private $host = "localhost";
         private $username = "haqizza";
         private $password = "10qp29wo";
-        private $database = "country_data";
+        private $database = "db_prak";
         public $connection = "";
 
-        function __construct(){}
+        function __construct(){
+
+        }
 
         function connectDatabase(){
             $this->connection = mysqli_connect($this->host, $this->username, $this->password, $this->database);
@@ -22,22 +25,29 @@
             mysqli_close($this->connection);
         }
 
-        function getCountryCityData(){
+        function auth($username, $password){    
             $this->connectDatabase();
             
-            $query = "SELECT * FROM country_city";
+            $query = "SELECT * FROM userdata WHERE username = '" . $username . "' AND password = '" . $password . "'";
             
             $result = mysqli_query($this->connection, $query);
-    
+            
+            // $data;
+
             $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            mysqli_free_result($result);
+            if ($result == true){
+                // mysqli_free_result($result);
+            }
+            else{
+                $data = array();
+            }
     
             $this->closeDatabase();
     
             return $data;
         }
-
-        function saveCountryCityData($countryName, $countryCode, $cityName, $cityPopulation){
+    
+        function createUser($username, $password){
             $this->connectDatabase();
     
             $query = "INSERT INTO country_city(country_name, country_code, city_name, city_population) VALUES('$countryName', '$countryCode', '$cityName', $cityPopulation)";

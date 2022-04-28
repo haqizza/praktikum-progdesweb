@@ -5,7 +5,7 @@
         private $host = "localhost";
         private $username = "haqizza";
         private $password = "10qp29wo";
-        private $database = "country_data";
+        private $database = "ester";
         public $connection = "";
 
         function __construct(){}
@@ -22,10 +22,10 @@
             mysqli_close($this->connection);
         }
 
-        function getCountryCityData(){
+        function getCompanyData(){
             $this->connectDatabase();
             
-            $query = "SELECT * FROM country_city";
+            $query = "SELECT * FROM company_information";
             
             $result = mysqli_query($this->connection, $query);
     
@@ -35,20 +35,6 @@
             $this->closeDatabase();
     
             return $data;
-        }
-
-        function saveCountryCityData($countryName, $countryCode, $cityName, $cityPopulation){
-            $this->connectDatabase();
-    
-            $query = "INSERT INTO country_city(country_name, country_code, city_name, city_population) VALUES('$countryName', '$countryCode', '$cityName', $cityPopulation)";
-            
-            $result = mysqli_query($this->connection, $query);
-    
-            if(!$result){
-                die('Could not get data: ' . mysqli_error());
-            }
-            
-            $this->closeDatabase();
         }
     }
 ?>

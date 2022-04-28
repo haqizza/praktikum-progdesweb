@@ -1,5 +1,5 @@
 <?php
-    include('controller.php');
+    include('db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +42,9 @@
             <th>City Population</th>
         </tr>
         <?php
-            $datas =  getCountryCityData();
+            $db = new Database();
+            
+            $datas =  $db->getCountryCityData();
             foreach ($datas as $index => $data) {
                 echo "<tr>" .
                 "<td>" . ($index + 1) . "</td>" .
